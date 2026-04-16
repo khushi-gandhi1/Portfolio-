@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Khushi Gandhi | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Syne:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Canvas for particle background -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span class="cloud-emoji">☁️</span>
+      <span class="brand-text">KG<span class="accent">.</span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <div class="hero-left-cloud">☁️</div>
+
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="tag-dot"></span>
+        <span>Available for Internships</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="greeting">Hello, I'm</span>
+        <span class="name glitch" data-text="Khushi Gandhi">Khushi Gandhi</span>
+        <span class="role-line">
+          <span class="role-prefix">I'm a </span>
+          <span class="typed-role" id="typedRole"></span>
+          <span class="cursor-blink">|</span>
+        </span>
+      </h1>
+      <p class="hero-desc">
+        B.Tech CSE student at <span class="highlight">Manav Rachna University</span> — 
+        building things with code, data, and curiosity.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-rocket"></i> View Projects
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fas fa-paper-plane"></i> Contact Me
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" data-target="3">0</span><span class="stat-label">Languages</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="5">0</span><span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="8">0</span><span class="stat-label">Skills</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="avatar-ring">
+        <div class="avatar-ring-2"></div>
+        <div class="avatar-ring-3"></div>
+        <div class="avatar-core">
+          <span class="avatar-icon">👩‍💻</span>
+        </div>
+        <div class="orbit orbit-1">
+          <div class="orbit-dot"><i class="fab fa-python"></i></div>
+        </div>
+        <div class="orbit orbit-2">
+          <div class="orbit-dot"><i class="fas fa-database"></i></div>
+        </div>
+        <div class="orbit orbit-3">
+          <div class="orbit-dot"><i class="fab fa-github"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about" id="about">
+    <div class="section-header">
+      <span class="section-tag">// About Me</span>
+      <h2 class="section-title">Who Am I<span class="accent">?</span></h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-card reveal">
+        <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+        <h3>Education</h3>
+        <p>B.Tech in Computer Science & Engineering</p>
+        <p class="card-sub">Manav Rachna University</p>
+        <span class="card-badge">Undergraduate</span>
+      </div>
+      <div class="about-card reveal delay-1">
+        <div class="card-icon"><i class="fas fa-bolt"></i></div>
+        <h3>Passion</h3>
+        <p>Tech Enthusiast with a love for problem-solving, data, and building real-world solutions.</p>
+        <span class="card-badge">Curious Mind</span>
+      </div>
+      <div class="about-card reveal delay-2">
+        <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <h3>Location</h3>
+        <p>Based in India, open to remote opportunities & collaborations worldwide.</p>
+        <span class="card-badge">India 🇮🇳</span>
+      </div>
+      <div class="about-card reveal delay-3 about-bio">
+        <div class="card-icon"><i class="fas fa-code"></i></div>
+        <h3>About Me</h3>
+        <p>I'm Khushi Gandhi, a passionate undergraduate student who loves turning ideas into digital realities. From writing Python scripts to querying MySQL databases, I enjoy every step of the development journey. I'm always exploring new technologies and seeking opportunities to grow as a developer.</p>
+        <div class="bio-tags">
+          <span>🎯 Goal-Driven</span>
+          <span>🤝 Team Player</span>
+          <span>📚 Lifelong Learner</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section class="skills" id="skills">
+    <div class="section-header">
+      <span class="section-tag">// Skills</span>
+      <h2 class="section-title">My Tech Stack<span class="accent">.</span></h2>
+    </div>
+
+    <div class="skills-grid">
+
+      <!-- Languages -->
+      <div class="skill-category reveal">
+        <h3 class="category-title"><i class="fas fa-terminal"></i> Languages</h3>
+        <div class="skill-items">
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fab fa-python skill-icon python"></i>
+              <span>Python</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fas fa-copyright skill-icon c-lang"></i>
+              <span>C Language</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fab fa-html5 skill-icon html"></i>
+              <span>HTML/CSS</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fab fa-js skill-icon js"></i>
+              <span>JavaScript</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="55"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Database -->
+      <div class="skill-category reveal delay-1">
+        <h3 class="category-title"><i class="fas fa-database"></i> Database & Data</h3>
+        <div class="skill-items">
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fas fa-database skill-icon mysql"></i>
+              <span>MySQL</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fas fa-chart-bar skill-icon data"></i>
+              <span>Data Handling</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fas fa-table skill-icon excel"></i>
+              <span>Excel / Sheets</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="skill-category reveal delay-2">
+        <h3 class="category-title"><i class="fas fa-tools"></i> Tools & Platforms</h3>
+        <div class="skill-items">
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fab fa-github skill-icon github"></i>
+              <span>Git & GitHub</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="68"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fas fa-code skill-icon vscode"></i>
+              <span>VS Code</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fab fa-linux skill-icon linux"></i>
+              <span>Linux Basics</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="50"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CS Fundamentals -->
+      <div class="skill-category reveal delay-3">
+        <h3 class="category-title"><i class="fas fa-brain"></i> CS Fundamentals</h3>
+        <div class="skill-items">
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fas fa-sitemap skill-icon dsa"></i>
+              <span>DSA Basics</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="62"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fas fa-network-wired skill-icon network"></i>
+              <span>Computer Networks</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="55"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fas fa-microchip skill-icon os"></i>
+              <span>Operating Systems</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="58"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fas fa-object-group skill-icon oop"></i>
+              <span>OOP Concepts</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Soft skills bubbles -->
+    <div class="soft-skills reveal">
+      <h3 class="category-title" style="text-align:center; margin-bottom:1.5rem;"><i class="fas fa-star"></i> Soft Skills</h3>
+      <div class="bubble-container">
+        <div class="bubble">🧩 Problem Solving</div>
+        <div class="bubble">🤝 Teamwork</div>
+        <div class="bubble">🗣️ Communication</div>
+        <div class="bubble">⏱️ Time Management</div>
+        <div class="bubble">🎯 Attention to Detail</div>
+        <div class="bubble">🔄 Adaptability</div>
+        <div class="bubble">💡 Critical Thinking</div>
+        <div class="bubble">📊 Analytical Skills</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section class="projects" id="projects">
+    <div class="section-header">
+      <span class="section-tag">// Projects</span>
+      <h2 class="section-title">What I've Built<span class="accent">.</span></h2>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card reveal">
+        <div class="project-glow"></div>
+        <div class="project-header">
+          <span class="project-num">01</span>
+          <div class="project-links">
+            <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <h3 class="project-title">Student Result Management</h3>
+        <p class="project-desc">A MySQL-powered application to store, manage and retrieve student academic records with efficient querying and data normalization.</p>
+        <div class="project-tech">
+          <span>Python</span><span>MySQL</span><span>SQL</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal delay-1">
+        <div class="project-glow"></div>
+        <div class="project-header">
+          <span class="project-num">02</span>
+          <div class="project-links">
+            <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <h3 class="project-title">Data Analysis Script</h3>
+        <p class="project-desc">Python script for cleaning, processing, and visualizing datasets using basic data handling techniques and libraries.</p>
+        <div class="project-tech">
+          <span>Python</span><span>CSV</span><span>Data Handling</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal delay-2">
+        <div class="project-glow"></div>
+        <div class="project-header">
+          <span class="project-num">03</span>
+          <div class="project-links">
+            <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <h3 class="project-title">Personal Portfolio Website</h3>
+        <p class="project-desc">This very portfolio — built from scratch with HTML, CSS and JavaScript featuring dark theme, animations, and responsive design.</p>
+        <div class="project-tech">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal delay-3">
+        <div class="project-glow"></div>
+        <div class="project-header">
+          <span class="project-num">04</span>
+          <div class="project-links">
+            <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <h3 class="project-title">C Programs Collection</h3>
+        <p class="project-desc">A curated collection of C programs covering sorting algorithms, file I/O, pointers, linked lists, and memory management.</p>
+        <div class="project-tech">
+          <span>C</span><span>Algorithms</span><span>DSA</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal delay-1 add-yours">
+        <div class="project-glow"></div>
+        <div class="add-project-content">
+          <span class="plus-icon">+</span>
+          <p>More projects coming soon...</p>
+          <span class="add-badge">In Progress 🚀</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact" id="contact">
+    <div class="section-header">
+      <span class="section-tag">// Contact</span>
+      <h2 class="section-title">Let's Connect<span class="accent">.</span></h2>
+    </div>
+    <div class="contact-wrapper">
+      <div class="contact-info reveal">
+        <p class="contact-desc">I'm open to internships, collaborations, and exciting projects. Feel free to reach out!</p>
+        <div class="contact-links">
+          <a href="mailto:khushigandhi@email.com" class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <span class="contact-label">Email</span>
+              <span class="contact-val">khushigandhi@email.com</span>
+            </div>
+          </a>
+          <a href="https://github.com/" target="_blank" class="contact-item">
+            <div class="contact-icon"><i class="fab fa-github"></i></div>
+            <div>
+              <span class="contact-label">GitHub</span>
+              <span class="contact-val">github.com/khushigandhi</span>
+            </div>
+          </a>
+          <a href="https://linkedin.com/in/" target="_blank" class="contact-item">
+            <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+            <div>
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-val">linkedin.com/in/khushigandhi</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal delay-1" id="contactForm">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="Jane Doe" required />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="jane@example.com" required />
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea rows="4" placeholder="Let's build something amazing together..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary full-width">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <span class="cloud-emoji">☁️</span>
+      <span class="footer-name">Khushi Gandhi</span>
+      <span class="footer-sep">·</span>
+      <span class="footer-sub">B.Tech CSE | Manav Rachna University</span>
+    </div>
+    <p class="footer-copy">Crafted with <span class="heart">♥</span> and lots of ☕ &nbsp;· &nbsp;© 2024 Khushi Gandhi</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
